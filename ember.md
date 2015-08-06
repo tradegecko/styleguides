@@ -113,36 +113,6 @@ by hooking into the object's `init` hook via `on`. This prevents you
 from forgetting to call `_super`. [Here is why you shouldn't override
 init](http://reefpoints.dockyard.com/2014/04/28/dont-override-init.html).
 
-### Use Pods structure
-
-Store local components within their pod, global components in the
-`components` structure.
-
-```
-app
-  application/
-    template.hbs
-    route.js
-  blog/
-    index/
-      blog-listing/ - component only used on the index template
-        template.hbs
-      route.js
-      template.hbs
-    route.js
-    comment-details/ - used within blog templates
-      component.js
-      template.hbs
-
-  components/
-    tag-listing/ - used throughout the app
-      template.hbs
-
-  post/
-    adapter.js
-    model.js
-    serializer.js
-```
 
 ## Controllers
 
